@@ -1,0 +1,471 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Prevents layout shifts */
+}
+
+body {
+    background-image: linear-gradient(120deg, #5f6268 0%, #1b1a1a 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.scrolled {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #000;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4d4646;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-item {
+    margin-left: 2rem;
+}
+
+.nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #cccccc;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+}
+
+.skill-images {
+    display: flex;
+    gap: 15px;
+}
+
+.skills img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border: 2px solid #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.skills img:hover {
+    transform: scale(1.1);
+}
+
+.project-buttons button {
+    background: rgb(90, 2, 2);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    /* Ensures spacing on smaller screens */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    /* Allow height to adjust */
+    width: 90%;
+    /* Make it more fluid */
+    max-width: 400px;
+    padding: 40px;
+    border-radius: 10px;
+    background: radial-gradient(circle, rgba(223, 223, 223, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.container>h1 {
+    font-size: 2rem;
+    /* Scalable size */
+    font-weight: bold;
+}
+
+.line {
+    border: 1px solid;
+    width: 70%;
+    margin-top: 10px;
+}
+
+.htp-container,
+.game-container {
+    margin-top: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.htp-container h2,
+.htp-container h3 {
+    margin-top: 20px;
+}
+
+.htp-container p {
+    margin: 20px;
+}
+
+.htp-container button {
+    padding: 5px;
+    width: 100%;
+    max-width: 200px;
+    font-size: 1rem;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 255);
+    color: rgb(255, 255, 255);
+    margin: 20px;
+    cursor: pointer;
+}
+
+.htp-container button:hover {
+    background-color: rgb(144, 144, 255);
+    color: rgb(1, 1, 1);
+    border: none;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-header {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow wrapping on small screens */
+    justify-content: center;
+}
+
+.high-score,
+.timer,
+.your-score {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 20px;
+    font-weight: bold;
+}
+
+.game-header input {
+    border: none;
+    border-bottom: 1px solid;
+    width: 100px;
+    background-color: transparent;
+    text-align: center;
+    font-size: 1.2rem;
+    outline: none;
+}
+
+.target-answer input {
+    padding: 10px;
+    font-size: 1.8rem;
+    width: 55px;
+    text-align: center;
+    border-radius: 100px;
+    border: none;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.user-input input {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+    max-width: 150px;
+    padding: 5px;
+    margin: 20px;
+    outline: none;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.numbers-button {
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.numbers-button button,
+.operations button {
+    font-size: 1rem;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    font-weight: bold;
+}
+
+.game-footer button {
+    font-size: 1rem;
+    margin: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+}
+
+.game-footer button:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+/* Responsive Design */
+
+/* Small Screens */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .container>h1 {
+        font-size: 1.5rem;
+    }
+
+    .htp-container button {
+        font-size: 0.9rem;
+        width: 90%;
+    }
+
+    .numbers-button button,
+    .operations button {
+        font-size: 0.9rem;
+        width: 40px;
+        height: 40px;
+    }
+
+    .game-footer button {
+        font-size: 0.9rem;
+        padding: 4px;
+    }
+}
+
+/* Medium Screens */
+@media (min-width: 600px) and (max-width: 1024px) {
+    .container {
+        width: 80%;
+        max-width: 500px;
+    }
+
+    .container>h1 {
+        font-size: 2rem;
+    }
+
+    .numbers-button button,
+    .operations button {
+        font-size: 1rem;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* Large Screens */
+@media (min-width: 1025px) {
+    .container {
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .navbar {
+        padding: 0.8rem;
+    }
+
+    .logo a {
+        font-size: 1.2rem;
+    }
+
+    .nav-menu {
+        top: 60px;
+        height: calc(100vh - 60px);
+    }
+
+    .bar {
+        width: 22px;
+        height: 2px;
+        margin: 4px auto;
+    }
+}
+
+
+
+/* Mobile Responsive Styles (up to 768px) */
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: #000;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+        height: calc(100vh - 70px);
+        overflow-y: auto;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 1.5rem 0;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* Footer Styling */
+footer {
+    background: #000000;
+    color: white;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #222020;
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-item i {
+    font-size: 20px;
+}
+
+.footer-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-item a:hover {
+    text-decoration: underline;
+}
+
+/* Footer bottom styling*/
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .nav-item {
+        margin: 0 0.5rem;
+    }
+}

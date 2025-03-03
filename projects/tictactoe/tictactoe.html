@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- My Custom CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/Project/Index.html">D|N</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="/Project/Index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="/Project/Index.html#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="/Project/Index.html#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="/Project/Index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="skills">
+        <h1>Technologies Used</h1>
+        <div class="skill-images">
+            <img src="images/html-5.png" alt="HTML">
+            <img src="images/css.png" alt="CSS">
+            <img src="images/js.png" alt="JavaScript">
+            <img src="images/bootstrap.png" alt="Bootstrap">
+        </div>
+        <div class="project-buttons">
+            <a href="/Project/projects/tictactoe.7z" download>
+                <button>Download Project</button>
+            </a>
+        </div>
+    </div>
+
+    <div id="tic-tac-toe-board">
+        <div class="row">
+            <div class="cell" id="cell-1"></div>
+            <div class="cell" id="cell-2"></div>
+            <div class="cell" id="cell-3"></div>
+        </div>
+        <div class="row">
+            <div class="cell" id="cell-4"></div>
+            <div class="cell" id="cell-5"></div>
+            <div class="cell" id="cell-6"></div>
+        </div>
+        <div class="row">
+            <div class="cell" id="cell-7"></div>
+            <div class="cell" id="cell-8"></div>
+            <div class="cell" id="cell-9"></div>
+        </div>
+    </div>
+    <div id="gameMessage" class="game-message"></div>
+    <button id="resetButton">Reset Game</button>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <div class="footer-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>dima25596@gmail.com</span>
+                </div>
+                <div class="footer-item">
+                    <i class="fas fa-phone"></i>
+                    <span>052-386-5020</span>
+                </div>
+                <div class="footer-item">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/dima-nudelman-3a6488354" target="_blank">LinkedIn Profile</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>Dima Nudelman</span>
+                <span>@All Rights Reserved</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
